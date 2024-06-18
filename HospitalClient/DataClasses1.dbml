@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HospitalInventoryDB" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=desktop-17tntl7\sqlexpress;Initial Catalog=HospitalInventoryDB;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="HospitalClient.Properties.Settings" SettingsPropertyName="HospitalInventoryDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AppointmentTable" Member="AppointmentTables">
+    <Type Name="AppointmentTable">
+      <Column Name="appid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="appday" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="apptime" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="patientid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Inventory" Member="Inventories">
+    <Type Name="Inventory">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Threshold" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
